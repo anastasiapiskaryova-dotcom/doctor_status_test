@@ -218,7 +218,7 @@ async def main():
             "Не найден BOT_TOKEN. Установи переменную окружения BOT_TOKEN "
             "с токеном, полученным от @BotFather."
         )
-    bot = Bot(token=token)
+    bot = Bot(token=token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     await dp.start_polling(bot)
 
 
